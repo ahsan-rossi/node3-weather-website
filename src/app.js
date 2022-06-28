@@ -37,7 +37,7 @@ app.get('/about', (req, res) =>{
 app.get('/help', (req, res) =>{
     res.render('help',{
         title:'Help Page',
-        message:'This is a help page...',
+        message:'It is on processing. Please visit after a while.....',
         name:'Ahsan Rossi'
     });
 })
@@ -68,7 +68,7 @@ app.get('/weather', (req, res)=> {
 
                 const temp = parseInt(output.main.temp)-273;
                 res.send({
-                    forecast: 'It\'s '+output.weather[0].description+' with '+temp+' degree temparature',
+                    forecast: 'It\'s '+output.weather[0].description+' with '+temp+' degrees temparature',
                     location: location
             
                 });
